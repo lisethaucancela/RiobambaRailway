@@ -1,0 +1,140 @@
+/* 
+    Created on : 09/05/2016, 12:47:54
+    Author     : Liseth
+*/
+body {
+    background: #000000;    
+}
+.navbar-default{
+    background: #000000;
+}
+footer .container{
+    padding-top: 20px;
+    padding-bottom: 20px;    
+}
+ul {
+    padding:0 0 0 0;    margin:0 0 0 0;
+}
+ul li {
+    list-style:none;    margin-bottom:25px;
+}
+ul li img {
+    cursor: pointer;
+}
+#home{
+    position: relative !important; width: 100% !important
+        display: flex;
+}
+#home img{
+    display: block; margin-left: auto; margin-right: auto;
+}
+/*--------- Padding --------*/
+.padding-top-10{padding-top: 10px;}
+.padding-top-15{padding-top: 15px;}
+.padding-top-20{padding-top: 20px;}
+.padding-top-50{padding-top: 50px;}
+.padding-left-5{padding-left: 5px;}
+.padding-left-40{padding-left: 40px;}
+.padding-0{padding: 0;}
+
+#sticky-header{
+    display: none;
+    z-index: 140;
+    position: fixed;
+    left: 0; top: 0; width: 100%;
+    background-color: rgba(22,22,22,0.8) !important
+}
+.navbar-header{
+    float: right;
+}
+/*-------- Nav bar -------*/
+.navbar { 
+    position: relative;
+    min-height: 80px;
+    border: 1px solid transparent;
+}
+.navbar-default{
+    background-color:rgba(22,22,22,0.8) !important
+    border: medium none;
+}
+.navbar-brand>img {
+    display: block
+}
+.navbar-nav li a:hover, .navbar-nav li.active a, .navbar-nav > li > a:focus {
+    color: #e73a25 !important;
+}
+.dropdown a:hover, dropdown li a:hover, .dropdown li.active a, a:focus, .dropdown > li > a:focus {
+    color: #e73a25 !important;
+
+}
+.idioma{
+    -webkit-transform: translateX(-30px);
+    -moz-transform: translateX(-30px);
+    -ms-transform: translateX(-30px);
+    transform: translateX(-30px);
+}
+.idioma{
+    float: left;
+}
+.idioma a, .social-network a{
+    width: 40px;height: 40px; float: left;
+    line-height: 29px;   overflow: hidden;
+    letter-spacing: 0px; font-size: 12px;
+}
+.idioma li, .social-network li{
+    display: inline-block;
+    margin: 3px;
+    text-align: center;
+    vertical-align: text-top;
+}
+.idioma ,.social-network {
+    margin: 0px;
+    padding-top: 30px;    
+}
+.social-network {
+    float:right;
+}
+.center-content{
+    display: flex; alignment-adjust: central;
+}
+.over {
+    color: #000000;
+    font-style: italic;
+    font-weight: bold;
+    font-family: fertigo;
+}
+.riobamba{
+    height: 40px;
+}
+.rail{    
+    font-size:  30px;    
+    line-height: 1;
+}
+.info{ 
+    padding-top: 10px;
+    line-height: 1;
+    font-size:  18px;
+}
+.tilt-footer{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.row .tilt-footer{
+    position: absolute;
+}
+.flag{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.copyright{
+    padding-top: 30px;
+    text-align: center;
+    color: #fff;
+}
+.copyright li{
+    display: inline-block;
+    margin: 3px;
+    text-align: center;
+    vertical-align: text-top;
+    list-style: inside;
+}
