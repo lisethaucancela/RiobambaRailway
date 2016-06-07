@@ -1,32 +1,18 @@
 /* 
     Created on : 09/05/2016, 12:47:54
-    Author     : Liseth
+    Author     : Liseth  https://www.lyft.com/  https://colorlib.com/activello/  http://riot.design/en/ http://presentation.creative-tim.com/
 */
 body {
     background: #000000;    
-}
-.navbar-default{
-    background: #000000;
-}
-footer .container{
-    padding-top: 20px;
-    padding-bottom: 20px;    
 }
 ul {
     padding:0 0 0 0;    margin:0 0 0 0;
 }
 ul li {
-    list-style:none;    margin-bottom:25px;
+    list-style:none;    
 }
 ul li img {
     cursor: pointer;
-}
-#home{
-    position: relative !important; width: 100% !important
-        display: flex;
-}
-#home img{
-    display: block; margin-left: auto; margin-right: auto;
 }
 /*--------- Padding --------*/
 .padding-top-10{padding-top: 10px;}
@@ -36,91 +22,232 @@ ul li img {
 .padding-left-5{padding-left: 5px;}
 .padding-left-40{padding-left: 40px;}
 .padding-0{padding: 0;}
-
-#sticky-header{
-    display: none;
-    z-index: 140;
-    position: fixed;
-    left: 0; top: 0; width: 100%;
-    background-color: rgba(22,22,22,0.8) !important
-}
-.navbar-header{
-    float: right;
-}
 /*-------- Nav bar -------*/
+.navbar-default{
+    border: medium none;
+    background-color: #000;
+}
 .navbar { 
     position: relative;
-    min-height: 80px;
+    min-height: 40px;
     border: 1px solid transparent;
 }
-.navbar-default{
-    background-color:rgba(22,22,22,0.8) !important
-    border: medium none;
-}
+.navbar-default .navbar-brand , .navbar-default .navbar-nav>li>a{
+    color: #fff;
+} 
 .navbar-brand>img {
     display: block
 }
 .navbar-nav li a:hover, .navbar-nav li.active a, .navbar-nav > li > a:focus {
     color: #e73a25 !important;
 }
-.dropdown a:hover, dropdown li a:hover, .dropdown li.active a, a:focus, .dropdown > li > a:focus {
+.dropdown a:hover, dropdown li a:hover, .dropdown li.active a, .dropdown > li > a:focus {
     color: #e73a25 !important;
-
 }
-.idioma{
-    -webkit-transform: translateX(-30px);
-    -moz-transform: translateX(-30px);
-    -ms-transform: translateX(-30px);
-    transform: translateX(-30px);
+.navbar-fixed-top{
+    position: fixed;
+}
+.pack a, pack a:hover, .pack active a, .pack a:focus {
+    color: #fff;
+}
+.box-footer a{
+    color: #000;
+    text-decoration-line: none;
+    text-decoration: none;
 }
 .idioma{
     float: left;
 }
-.idioma a, .social-network a{
-    width: 40px;height: 40px; float: left;
-    line-height: 29px;   overflow: hidden;
-    letter-spacing: 0px; font-size: 12px;
-}
-.idioma li, .social-network li{
-    display: inline-block;
-    margin: 3px;
-    text-align: center;
-    vertical-align: text-top;
-}
-.idioma ,.social-network {
-    margin: 0px;
-    padding-top: 30px;    
-}
 .social-network {
     float:right;
 }
-.center-content{
-    display: flex; alignment-adjust: central;
+.idioma a, .social-network a{
+    width: 40px;            height: 40px; float: left;
+    line-height: 29px;      overflow: hidden;
+    letter-spacing: 0px;    font-size: 12px;
 }
-.over {
-    color: #000000;
-    font-style: italic;
-    font-weight: bold;
-    font-family: fertigo;
+.idioma li, .social-network li{
+    display: inline-block;  margin: 3px;
+    text-align: center;     vertical-align: text-top;
 }
-.riobamba{
-    height: 40px;
+.idioma ,.social-network {
+    margin: 10px;           padding-top: 30px;    
 }
-.rail{    
-    font-size:  30px;    
-    line-height: 1;
+#home .center-content{
+    display: flex;          text-align: center;
 }
-.info{ 
-    padding-top: 10px;
-    line-height: 1;
-    font-size:  18px;
+.logo{
+    text-align: center;
 }
-.tilt-footer{
-    padding-top: 10px;
-    padding-bottom: 10px;
+.box{
+    width: 30px;            height: 32px; float: left;
+    margin-top: 20px;
 }
-.row .tilt-footer{
+.box-footer .col-md-2{
+    padding: 0 10px;
+}
+.tagline, .work-above{
+    height: 100%;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding: 7px 0;
+    text-align: center;
+}
+.tagline > img{
+    width: 100%;
+    height: 30px;
+    min-width: 30px;
+    z-index: 1;
+    position: relative;
+}
+.work-above > img{
+    width: 100%;
+    height:  100%;
+    z-index: 1;
+    position: relative;
+}
+.tagline .container, .work-above .container{
+    z-index: 3;
     position: absolute;
+    display: block;
+    top :0;
+    width: 100%;
+}
+.pack .container{
+    padding-top: 40px;
+}
+.pack, .build{
+    text-align: center !important;    
+    color: #fff;    
+}
+.build .container{
+    -webkit-transform: rotate(-2deg) ;
+    -moz-transform: rotate(-2deg);
+    -o-transform:  rotate(-2deg) ;
+    -ms-transform: rotate(-2deg) ;
+    transform: rotate(-2deg);
+    padding-top: 40px;
+    color: #fff;
+}
+.check , .testimonials{
+    text-align: right;   
+}
+.check .container{
+    padding-right: 50px;
+    padding-top: 40px;    
+    color: #fff;    
+}
+.testimonials .container{
+    padding-right: 55px;
+    padding-top: 15px;    
+    color: #000;    
+}
+.fertigo{
+    font-style: italic;   
+    font-family: fertigo; 
+}
+.normal{
+    font-style: normal;   
+    font-family: serif;
+}
+.tagline h2 {
+    color: #000;    
+    position: relative; 
+    font-size: 2.3em;     
+    display: inline-block; 
+    margin-top: 5px;
+    font-weight: 900;
+}
+.work-above h1, h2 , h3, h4{
+    font-weight: bold;
+    position: relative;    
+    font-style: normal;   
+    font-family: serif;
+}
+h1{
+    font-size: 3.5em;
+}
+h2{
+    font-size: 2.8em;
+}
+h3{
+    font-size: 2.3em;
+}
+h4{
+    font-size: 0.9em;
+    letter-spacing: 5.2pt;
+    font-weight: 500;
+}
+.check h1, .check h2, .check h3{  
+    line-height: 0.3;
+}
+.check h4{ 
+    line-height: 2;
+}
+.testimonials h2 , .box-footer h2{    
+    font-size: 2.3em;
+}
+.build h2{
+    line-height: 0.8;
+}
+.box-footer .container{
+    color: #000;
+}
+.box-footer h3
+{
+    color: #000;
+    font-size: 1.5em;
+}
+@media(max-width: 768px){
+    .tagline h2{
+        font-size: 1.5em;
+    }   
+    .work-above h2{
+        font-size: 1.7em;
+    }
+    .pack .container{
+        padding-top: 10px;
+    }
+    .navbar {
+        min-height: 20px;
+    }
+    .navbar-default {
+        background-color:rgba(22,22,22,0.8)!important
+            z-index: 999999;
+    } 
+    .navbar-nav li a:hover, .navbar-nav li.active a, .navbar-nav > li > a:focus {
+        color: #e73a25 !important;
+    }
+    .dropdown a:hover, dropdown li a:hover, .dropdown li.active a, a:focus, .dropdown > li > a:focus {
+        color: #e73a25 !important;
+    }
+    .navbar-default{
+        background-color: rgba(22,22,22,0.8);
+    }
+    .build .container{
+        padding-top: 45px;
+    }
+    .testimonials .container{
+        padding-top: 30px;  
+    }
+    #stick{
+        position: fixed;
+        z-index: 140;
+        width: 100%
+    }
+    .content {
+        padding-top: 60px;
+    }
+}
+@media(max-width: 480px){
+    .build .container{
+        padding-top: 20px;
+    }
+    .testimonials .container{
+        padding-top: 8px;   
+    }
+
 }
 .flag{
     padding-top: 10px;
@@ -137,4 +264,15 @@ ul li img {
     text-align: center;
     vertical-align: text-top;
     list-style: inside;
+}
+.content {
+
+}
+
+#theater{
+
+    position: relative;
+}
+.center-block{
+    float: none;
 }
