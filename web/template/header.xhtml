@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>TODO supply a title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <div id="stick">
+            <div class="navbar navbar-default" role="navigation">
+                <div class="container">
+                    <!-- Brand y toggle para visualizacion movil -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-header">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand visible-xs" href="#">Riobamba Railway</a>
+                    </div>                   
+                    <div class="idioma hidden-xs">
+                        <f:view locale="#{languageBean.language}">
+                            <h:form>
+                                <h:commandLink action="#{languageBean.actionEnglish()}">
+                                    <img src="images/english.png" alt="english" class="img-responsive"/>
+                                </h:commandLink>
+                                <h:commandLink action="#{languageBean.actionEspañol()}">
+                                    <img src="images/spanish.png" alt="spanish" class="img-responsive"/>
+                                </h:commandLink>
+                            </h:form>
+                        </f:view>
+                    </div>
+                    <div class="social-network hidden-xs">
+                        <a href="http://www.facebook.com" target="_blank"><img src="images/facebook.png" alt="facebook" class="img-responsive" /></a>
+                        <a href="http://www.twitter.com" target="_blank"><img src="images/twitter.png" alt="twitter" class="img-responsive"/></a>
+                    </div>
+                    <!-- Inicio navbar-collapse -->
+                    <div class="collapse navbar-collapse" id="nav-header">
+                        <ul class="nav navbar-nav visible-xs">
+                            <li><a href="#">Inicio</a></li>
+                            <li><a href="#" target="_blank">Facebook</a></li> 
+                            <li><a href="#" target="_blank">Twitter</a></li>  
+                        </ul>             
+                    </div><!-- /.navbar-collapse -->                    
+                </div><!-- /.container -->
+            </div>   
+        </div>
+        <div class="row">
+            <div class=" col-lg-4 col-md-6 col-sm-7 col-xs-10 center-block">
+                <a href="index.xhtml">
+                    <img src="images/logo.png" alt="Riobamba Railway" class="img-responsive text-center logo"/>
+                </a>
+            </div>
+        </div>
+    </body>
+</html>

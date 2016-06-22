@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>TODO supply a title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <ui:composition template="template/template.xhtml">
+            <ui:define name="content"> 
+                <div class="content">
+                    <div class="container ">  
+                        <div class="row">
+                            <div class="col-md-7 col-xs-12">
+                                <img src="images/pack1.png" class="img-responsive"/>  
+                            </div>
+                            <div class="col-md-4 col-xs-10 work-above build">
+                                <img src="images/build.png" class="img-responsive"/> 
+                                <div class="container">
+                                    <h2><h:outputText value="#{msg.build}"/><p></p>
+                                        <h:outputText value="#{msg.your}"/>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fertigo" style="color: #fff;">
+                            Descubra y organice sus propias aventuras a través de Riobamba Railway. Todo lo que usted 
+                            desee: Climbing, Treeking con el soporte y experiencia de Incañan Ecotourism.
+                        </div>
+                        <script type="text/javascript">
+                            function handleDrop(event, ui) {
+                                var droppedCar = ui.draggable;
+                                droppedCar.fadeOut('fast');
+                            }
+                        </script>
+
+                        <h:form id="packForm">
+                            <p:fieldset id="disponiblePackField" legend="Actividades Disponibles">
+                                <p:dataGrid id="disponiblePack" var="pack" value="#{packView.packs}" columns="4">
+                                    <p:panel id="pnl" header="#{pack.id}" style="text-align:center">
+                                        <h:panelGrid columns="1" style="width:100%">
+                                            <p:graphicImage name="images/#{pack.descripcion}.png" />
+                                        </h:panelGrid>
+                                    </p:panel>
+
+                                    <p:draggable for="pnl" revert="true" handle=".ui-panel-titlebar" stack=".ui-panel"/>
+                                </p:dataGrid>
+                            </p:fieldset>
+
+                            <p:fieldset id="selectedPacks" legend="Actividades Seleccionadas" style="margin-top:20px">
+                                <p:outputPanel id="dropArea">
+                                    <h:outputText value="!!!Drop here!!!" rendered="#{empty packView.droppedPack}" style="font-size:24px;" />
+                                    <p:dataTable id="selectedPacksTable" var="pack" value="#{packView.droppedPack}" rendered="#{not empty packView.droppedPack}">
+                                        <p:column headerText="Id">
+                                            <h:outputText value="#{pack.id}" />
+                                        </p:column>
+
+                                        <p:column headerText="Descripcion">
+                                            <h:outputText value="#{pack.descripcion}" />
+                                        </p:column>
+
+                                        <p:column headerText="Horas">
+                                            <h:outputText value="#{pack.horas}" />
+                                        </p:column>
+
+                                        <p:column headerText="Costo">
+                                            <h:outputText value="#{pack.costo}" />
+                                        </p:column>
+
+                                        <p:column style="width:32px">
+                                            <p:commandButton update=":packForm:display" oncomplete="PF('carDialog').show()" icon="ui-icon-search">
+                                                <f:setPropertyActionListener value="#{pack}" target="#{packView.selectedPack}" />
+                                            </p:commandButton>
+                                        </p:column>
+                                    </p:dataTable>
+                                </p:outputPanel>
+                            </p:fieldset>
+
+                            <p:droppable for="selectedPacks" tolerance="touch" activeStyleClass="ui-state-highlight" datasource="availableCars" onDrop="handleDrop">
+                                <p:ajax listener="#{packView.onPackDrop}" update="dropArea disponiblePack" />
+                            </p:droppable>
+
+                            <p:dialog header="Car Detail" widgetVar="carDialog" resizable="false" draggable="false"
+                                      showEffect="fade" hideEffect="fade" modal="true">
+
+                                <p:outputPanel id="display">
+                                    <h:panelGrid columns="2" cellpadding="5" rendered="#{not empty packView.selectedPack}">
+                                        <f:facet name="header">
+                                            <p:graphicImage name="images/#{packView.selectedPack.descripcion}"/>
+                                        </f:facet>
+
+                                        <h:outputText value="Id" />
+                                        <h:outputText value="#{packView.selectedPack.id}" style="font-weight:bold"/>
+
+                                        <h:outputText value="Year:" />
+                                        <h:outputText value="#{packView.selectedPack.descripcion}" style="font-weight:bold"/>
+
+                                        <h:outputText value="Brand" />
+                                        <h:outputText value="#{packView.selectedPack.horas}" style="font-weight:bold"/>
+
+                                        <h:outputText value="Color:" />
+                                        <h:outputText value="#{packView.selectedPack.costo}" style="font-weight:bold"/>
+                                    </h:panelGrid>
+                                </p:outputPanel>
+                            </p:dialog>
+                        </h:form>
+                        <div class="row">
+                            <div class="col-md-4 ">
+                                <a href="pack1.xhtml"> <img src="images/pack1_.png" class="img-responsive"/></a> 
+                            </div>
+                            <div class="col-md-4">
+                                <img src="images/pack2_.png" class="img-responsive"/> 
+                            </div>
+                            <div class="col-md-4">
+                                <img src="images/pack3_.png" class="img-responsive"/> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>

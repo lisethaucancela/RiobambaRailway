@@ -2,208 +2,101 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets" 
       xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <head>
         <title>Riobamba Railway</title>
-        <meta http-equiv="content-type" content="text/html; charset-utf-8"/>
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0"/>
-        <meta name="author" content="William Morocho, Liseth Aucancela"/>
-        <!-- Latest compiled and minified CSS 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/> -->
-        <link rel="stylesheet" href="css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="css/style.css"/>
-        <style type="text/css"></style> 
     </head>
     <h:body>
-        <div id="header"> 
-            <div id="stick">
-                <div class="navbar navbar-default" role="navigation">
-                    <div class="container">
-                        <!-- Brand y toggle para visualizacion movil -->
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-header">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            <a class="navbar-brand visible-xs" href="#">Riobamba Railway</a>
-                        </div>                   
-                        <div class="idioma hidden-xs">
-                            <f:view locale="#{languageBean.language}">
-                                <h:form>
-                                    <h:commandLink action="#{languageBean.actionEnglish()}">
-                                        <img src="images/english.png" alt="english" class="img-responsive"/>
-                                    </h:commandLink>
-                                    <h:commandLink action="#{languageBean.actionEspañol()}">
-                                        <img src="images/spanish.png" alt="spanish" class="img-responsive"/>
-                                    </h:commandLink>
-                                </h:form>
-                            </f:view>
-                        </div>
-                        <div class="social-network hidden-xs">
-                            <a href="http://www.facebook.com" target="_blank"><img src="images/facebook.png" alt="facebook" class="img-responsive" /></a>
-                            <a href="http://www.twitter.com" target="_blank"><img src="images/twitter.png" alt="twitter" class="img-responsive"/></a>
-                        </div>
-                        <!-- Inicio navbar-collapse -->
-                        <div class="collapse navbar-collapse" id="nav-header">
-                            <ul class="nav navbar-nav visible-xs">
-                                <li><a href="#">Inicio</a></li>
-                                <li><a href="#" target="_blank">Facebook</a></li> 
-                                <li><a href="#" target="_blank">Twitter</a></li>  
-                            </ul>             
-                        </div><!-- /.navbar-collapse -->
-                    </div><!-- /.container -->
-                </div>   
-            </div>
-        </div>
-
-        <div class="content">
-            <div class="container ">  
-                <div class="row">
-                    <div class=" col-lg-5 col-md-6 col-sm-7 col-xs-10 center-block">
-                        <img src="images/logo.png" alt="Riobamba Railway" class="img-responsive text-center"/>
-                    </div>
-                </div>
-                <div class="tagline">
-                    <img src="images/div.png"/>
-                    <div class="container "> 
-                        <h2 class="fertigo"> 
-                            <h:outputText value="#{msg.railway}"/>
-                        </h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-7 col-xs-12 pack">
-                        <div class="row work-above">
-                            <div class="col-sm-12">
-                                <a href="#">
-                                    <img src="images/pack1.png" class="img-responsive"/>  
-                                    <div class="container">
-                                        <h2>
-                                            <h:outputText value="#{msg.pack1}"/>
-                                        </h2>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="row work-above">
-                            <div class="col-sm-12">
-                                <a href="#">
-                                    <img src="images/pack1.png" class="img-responsive"/>  
-                                    <div class="container">
-                                        <h2>
-                                            <h:outputText value="#{msg.pack2}"/>
-                                        </h2>
-
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="row work-above">
-                            <div class="col-sm-12 ">
-                                <a href="#">
-                                    <img src="images/pack1.png" class="img-responsive"/>  
-                                    <div class="container">
-                                        <h2><h:outputText value="#{msg.pack3}"/></h2>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-5 col-xs-12">
-                        <div class="row work-above check">
-                            <img src="images/riobamba.png" class="img-responsive"/>
-                            <div class="container">
-                                <h2 class="fertigo">Check</h2>
-                                <h1>RIOBAMBA</h1>
-                                <h3>ECUADOR</h3>
-                                <h4>SUDAMÉRICA</h4>
-                            </div>
-                        </div>
-                        <div class="row work-above testimonials">
-                            <a href="#">
-                                <img src="images/testimonial.png" class="img-responsive"/>
-                                <div class="container">
-                                    <h2>
-                                        <div class="fertigo"><h:outputText value="#{msg.testimonial}"/></div>
-                                    </h2>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="row work-above build">
-                            <a href="#">
-                                <img src="images/buy.png" class="img-responsive"/>
-                                <div class="container">
-                                    <h2><h:outputText value="#{msg.build}"/><p></p>
-                                        <h:outputText value="#{msg.your}"/>
-                                    </h2>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <footer>
-            <div class="container"> 
-                <div class="row work-above box-footer">
-                    <img src="images/foot.png" class="img-responsive" />
-                    <div class="container padding-top-10">                        
-                        <div class="col-lg-4 col-md-4 col-sm-2 col-md-offset-1 col-sm-offset-0"> 
-                            <a href="#">
+        <ui:composition template="template/template.xhtml">
+            <ui:define name="content">
+                <div class="content">
+                    <div class="container ">                         
+                        <div class="tagline">
+                            <img src="images/div.png"/>
+                            <div class="container "> 
                                 <h2 class="fertigo"> 
-                                    <h:outputText value="#{msg.foot1}"/>
+                                    <h:outputText value="#{msg.railway}"/>
                                 </h2>
-                            </a>
+                            </div>
                         </div>
-                        <div class="col-lg-2 col-md-2 col-sm-2" >
-                            <a href="#">
-                                <img src="images/atencion.png" class="box"/>
-                                <h3>
-                                    <h:outputText value="#{msg.foot2}"/> <br></br>
-                                    <h:outputText value="#{msg.foot3}"/>
-                                </h3>
-                            </a>
-                        </div>
-                        <div class="col-lg-2 col-md-2 col-sm-2">    
-                            <a href="#">
-                                <img src="images/pago.png" class="box" style="height: 38px; width: 25px"/>
-                                <h3>
-                                    <h:outputText value="#{msg.foot4}"/><br></br>
-                                    <h:outputText value="#{msg.foot5}"/>
-                                </h3>
-                            </a>
-                        </div>
-                        <div class="col-lg-2 col-md-2 col-sm-2">
-                            <a href="#">
-                                <img src="images/precio.png" class="box"/>
-                                <h3> 
-                                    <h:outputText value="#{msg.foot6}"/> <br></br>
-                                    <h:outputText value="#{msg.foot7}"/>
-                                </h3>
-                            </a>
+                        <div class="row">
+                            <div class="col-md-7 col-sm-7 col-xs-12 pack">
+                                <div class="row work-above">
+                                    <div class="col-md-12 col-sm-12">
+                                        <a href="pack1.xhtml">
+                                            <img src="images/pack1.png" class="img-responsive"/>  
+                                            <div class="container">
+                                                <h2>
+                                                    <h:outputText value="#{msg.pack1}"/>
+                                                </h2>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row work-above">
+                                    <div class="col-md-12 col-sm-12">
+                                        <a href="#">
+                                            <img src="images/pack2.png" class="img-responsive"/>  
+                                            <div class="container">
+                                                <h2>
+                                                    <h:outputText value="#{msg.pack2}"/>
+                                                </h2>
+
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row work-above">
+                                    <div class="col-md-12 col-sm-12 ">
+                                        <a href="#">
+                                            <img src="images/pack3.png" class="img-responsive"/>  
+                                            <div class="container">
+                                                <h2><h:outputText value="#{msg.pack3}"/></h2>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-5 col-xs-12">
+                                <div class="row work-above check">
+                                    <img src="images/riobamba.png" class="img-responsive"/>
+                                    <div class="container"> 
+                                            <h2 class="fertigo">Check</h2>
+                                            <h1>RIOBAMBA</h1>
+                                            <h3>ECUADOR</h3>
+                                            <h4>SUDAMÉRICA</h4>
+                                    </div>
+                                </div>
+                                <div class="row work-above testimonials">
+                                    <a href="#">
+                                        <img src="images/testimonial.png" class="img-responsive"/>
+                                        <div class="container">
+                                            <h2>
+                                                <div class="fertigo"><h:outputText value="#{msg.testimonial}"/></div>
+                                            </h2>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="row work-above build">
+                                    <a href="build.xhtml">
+                                        <img src="images/build.png" class="img-responsive"/>
+                                        <div class="container">
+                                            <h2><h:outputText value="#{msg.build}"/><p></p>
+                                                <h:outputText value="#{msg.your}"/>
+                                            </h2>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>                           
-            </div>
-            <div class="flag">
-                <img src="images/flag.png" class="img-responsive" />                   
-            </div>
-            <div class="copyright" >
-                <ul>
-                    <li>ABOUT RIOBAMBA RAILWAY </li>
-                    <li>TERMS Y CONDITIONS </li>
-                    <li>SITE MAP</li>
-                    <li>CONTACT US</li>
-                </ul>
-                <p>DESARRROLLADO POR E.SOLUTIONS PARA RAILWAY TODOS LOS DERECHOS RESERVADOS</p>
-            </div>         
-        </footer>
-        <script src="js/jquery-1.12.3.min.js"/>
-        <script src="js/bootstrap.min.js"/>
-
+                </div>
+                <script src="js/jquery-1.12.3.min.js"/>
+                <script src="js/bootstrap.min.js"/>
+            </ui:define>
+        </ui:composition>
     </h:body>
 </html>
 
