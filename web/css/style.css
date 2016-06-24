@@ -260,7 +260,29 @@ h4{
     margin-top: -25px;
     margin-left: 820px
  }
- 
+
+ .lh {
+  background-color: black;
+  width: 880px;
+  margin-left: 30px;
+  margin-top: 190px;
+  height: 2px;
+}
+.lineDiscontinua{
+    margin-top: 50px;
+    width: 880px;
+    margin-left: 30px;
+    
+    
+}
+.imgButton{
+    margin-top: -95px;
+    margin-left: 30px;
+    width: 200px;
+    height: 45px;
+        
+    
+}
 @media(max-width: 768px){
     .tagline h2{
         font-size: 1.8em;
