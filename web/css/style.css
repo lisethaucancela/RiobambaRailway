@@ -14,6 +14,9 @@ ul li {
 ul li img {
     cursor: pointer;
 }
+
+
+
 /*--------- Padding --------*/
 .padding-top-10{padding-top: 10px;}
 .padding-top-15{padding-top: 15px;}
@@ -205,6 +208,40 @@ h4{
         padding-top: 15px;
         
     }
+    
+
+.Cuadrado {
+    margin-left: 60px;
+    //margin-top: 60px;
+    padding: 50px 50px 50px 50px;
+     width: 800px; 
+     height: 450px; 
+     //border: 2px solid #555;
+     
+
+}
+.margen{
+    
+    width: 950px; 
+     height: 350px; 
+     //background: black;
+     border: 2px solid black;
+}
+.rectanguloMargen{
+    
+    width: 950px; 
+     height: 40px; 
+     background: black;
+     //border: 2px solid black;
+}
+.rectanguloGris{
+    
+    width: 950px; 
+     height: 40px; 
+     background: grey;
+     //border: 2px solid black;
+}
+
 @media(max-width: 768px){
     .tagline h2{
         font-size: 1.8em;
