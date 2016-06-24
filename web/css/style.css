@@ -227,7 +227,7 @@ h4{
      //background: black;
      border: 2px solid black;
 }
-.rectanguloMargen{
+.rectanguloNegro{
     
     width: 950px; 
      height: 40px; 
@@ -242,6 +242,25 @@ h4{
      //border: 2px solid black;
 }
 
+.columna1{
+    margin-top: 100px;
+    margin-left: 300px
+ }
+.columna2{
+    margin-top: -25px;
+    margin-left: 550px
+ }
+ 
+ .columna3{
+    margin-top: -25px;
+    margin-left: 700px
+ }
+ 
+ .columna4{
+    margin-top: -25px;
+    margin-left: 820px
+ }
+ 
 @media(max-width: 768px){
     .tagline h2{
         font-size: 1.8em;
