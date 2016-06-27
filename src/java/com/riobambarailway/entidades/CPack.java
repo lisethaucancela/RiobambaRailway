@@ -10,20 +10,27 @@ package com.riobambarailway.entidades;
  * @author Liseth
  */
 public class CPack {
+
     private int id;
-    private String descripcion;
+    private String nombre;
+    private String detalle;
     private int horas;
     private double costo;
+    private boolean elegido;
 
     public CPack() {
     }
 
-    public CPack(int id, String descripcion, int horas, double costo) {
+
+    public CPack(int id, String nombre, String detalle, int horas, double costo) {
         this.id = id;
-        this.descripcion = descripcion;
+        this.nombre = nombre;
+        this.detalle = detalle;
         this.horas = horas;
         this.costo = costo;
+        elegido = false;
     }
+    
 
     public int getId() {
         return id;
@@ -33,14 +40,23 @@ public class CPack {
         this.id = id;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
+    public String getDetalle() {
+        return detalle;
+    }
+
+    public void setDetalle(String detalle) {
+        this.detalle = detalle;
+    }
+
+  
     public int getHoras() {
         return horas;
     }
@@ -56,6 +72,15 @@ public class CPack {
     public void setCosto(double costo) {
         this.costo = costo;
     }
-    
-    
+
+    public boolean isElegido() {
+        return elegido;
+    }
+
+    public void setElegido(boolean elegido) {
+        this.elegido = elegido;
+    }
+
+  
+
 }

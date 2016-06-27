@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>TODO supply a title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <ui:composition template="template/template.xhtml">
+            <ui:define name="content"> 
+                <div class="content">
+                    <div class="container ">  
+                        <div class="row">
+                            <div class="col-md-7 col-xs-12">
+                                <img src="images/pack1.png" class="img-responsive"/>  
+                            </div>
+                            <div class="col-md-4 col-xs-10 work-above build">
+                                <img src="images/build.png" class="img-responsive"/> 
+                                <div class="container">
+                                    <h2><h:outputText value="#{msg.build}"/><p></p>
+                                        <h:outputText value="#{msg.your}"/>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fertigo" style="color: #fff;">
+                            Descubra y organice sus propias aventuras a través de Riobamba Railway. Todo lo que usted 
+                            desee: Climbing, Treeking con el soporte y experiencia de Incañan Ecotourism.
+                        </div>
+                        <div style="background-color: #fff">
+                            <h:form id="formPack">
+                                <div class="row">
+                                    <ui:repeat var="paq" value="#{packControlador.lstPack}">
+                                        <div class="col-xs-6 col-sm-4 col-lg-3" id="#{paq.id}">
+                                            <div class="card" >
+                                                <div class="thumbnail">
+                                                    <img src="images/logo.png" alt="Riobamba Railway" class="img-responsive"/>
+                                                    <div class="details">
+                                                        <div class="detalle">
+                                                            <h:outputLabel value="#{paq.nombre}"/>
+                                                        </div>
+                                                        <div class="clearfix">
+                                                        </div>
+                                                    </div>
+                                                    <b class="actions">
+                                                        <a class="btn btn-neutral btn-round btn-fill" href="/product/material-kit-pro">More Details</a>
+                                                    </b>
+                                                </div>
+                                                <div class="card-info">
+                                                    <div class="checkbox">                                                        
+                                                        <label>
+                                                            <h:selectBooleanCheckbox  
+                                                                value="#{paq.elegido}" onclick="#{packControlador.seleccionados()}" />
+                                                        </label>                                                   
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </ui:repeat>
+
+                                </div>
+                                <p:commandLink id="btnConfirmar" process="@form" ajax="false" value="Confirmar" title="Confirmar" 
+                                               actionListener="#{packControlador.seleccionados()}" class="btn btn-primary " >
+
+                                </p:commandLink>
+                            </h:form>  
+                            <h:form id="frmPack">
+                                <p:growl id="mensajeGeneral" showDetail="true" sticky="false" life="5000" />
+                                <div class="row">
+                                    <div class="col-md-6 col-md-offset-3">
+                                        <p:panel id="pnlPackDatos">
+                                            <center>
+                                                <h:outputText value="LISTA DE ACTIVIDADES" class="h4"/></center>
+                                            <br/>  
+                                            <div class="table-responsive">
+                                                <table class="table table-striped table-hover " id="myDataTables">
+                                                    <thead>
+                                                        <tr class="headTable">
+                                                            <th>Código</th>
+                                                            <th>Descripcíon</th>
+                                                            <th>Horas</th>
+                                                            <th>Costo</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="rowsHighlight">
+                                                        <ui:repeat var="Pack" value="#{packControlador.lstPackSeleccionados}" >
+                                                            <tr aria-selected="false" id="data#{Pack.id}">
+                                                                <td>#{Pack.id}</td>
+                                                                <td>#{Pack.nombre}</td>
+                                                                <td>#{Pack.horas}</td>
+                                                                <td>US$#{Pack.costo}</td>
+                                                            </tr>
+                                                        </ui:repeat>
+                                                        <tr>
+                                                            <td colspan="2"></td>
+                                                            <td>#{packControlador.totalHoras}</td>
+                                                            <td>US$#{packControlador.totalCosto} por persona</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </p:panel>
+                                    </div>
+                                </div>
+                            </h:form> 
+                        </div>      
+                        <div class="row">
+                            <div class="col-md-4 ">
+                                <a href="pack1.xhtml"> <img src="images/pack1_.png" class="img-responsive"/></a> 
+                            </div>
+                            <div class="col-md-4">
+                                <img src="images/pack2_.png" class="img-responsive"/> 
+                            </div>
+                            <div class="col-md-4">
+                                <img src="images/pack3_.png" class="img-responsive"/> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
