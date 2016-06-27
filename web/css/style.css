@@ -283,9 +283,27 @@ h4{
     margin-top: -95px;
     margin-left: 30px;
     width: 200px;
-    height: 45px;
-        
-    
+    height: 45px;  
+}
+.letraGris1{
+    margin-top:-255px;
+    margin-left:80px;  
+}
+.letraGris2{
+    margin-top:-255px;
+    margin-left:350px;  
+}
+.letraGris3{
+    margin-top:-255px;
+    margin-left:500px;  
+}
+.letraGris4{
+    margin-top:-255px;
+    margin-left:700px;  
+}
+.letraGris5{
+    margin-top:-255px;
+    margin-left:800px;  
 }
 @media(max-width: 768px){
     .tagline h2{
