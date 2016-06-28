@@ -14,7 +14,15 @@ ul li {
 ul li img {
     cursor: pointer;
 }
-
+.text-red{
+    color: #ed1c24;
+}
+.text-pad{
+    padding-left: 20px;
+}
+.text-padd{
+    padding-left: 60px;
+}
 
 
 /*--------- Padding --------*/
@@ -145,6 +153,11 @@ ul li img {
     padding-top: 15px;    
     color: #000;    
 }
+.recomendacion .container{
+    padding-right: 0px;
+    padding-top: 15px;    
+    color: #000;    
+}
 .fertigo{
     font-style: italic;   
     font-family: fertigo; 
@@ -190,6 +203,16 @@ h4{
 .testimonials h2 , .box-footer h2{    
     font-size: 2.3em;
 }
+.web img{
+    padding-bottom: 10px;
+}
+
+.recomendacion{
+    font-size: 0.8em;
+}
+.recomendacion .container{
+    padding-left: 75px;
+}
 .build h2{
     line-height: 0.8;
 }
@@ -205,7 +228,9 @@ h4{
     color: #000;
     font-size: 1.5em;
 }
-<<<<<<< HEAD
+.work{
+    padding: 10px;
+}
 .content {
     padding-top: 15px;
 
@@ -228,12 +253,12 @@ h4{
     background: transparent;
 }
 .card-info {
-    padding: 15px;
+    padding: 5px;
     border-radius: 0 0 12px 12px;
 }
 .card .actions {
     position: absolute;
-    z-index: 3000;
+    z-index: 100;
     top: 50%;
     text-align: center;
     width: 100%;
@@ -282,7 +307,7 @@ h4{
     display: block;
     width: 100%;
     background-color: rgba(0,0,0,0.75);
-    z-index: 300;
+    z-index: 50;
     content: "";
     left: 0;
     border-radius: 12px;
@@ -316,81 +341,67 @@ h4{
     height: auto;
     margin-left: auto;
     margin-right: auto;
-=======
- .content {
-        padding-top: 15px;
-        
-    }
-    
+}
 
 .Cuadrado {
     margin-left: 60px;
     //margin-top: 60px;
     padding: 50px 50px 50px 50px;
-     width: 800px; 
-     height: 450px; 
-     //border: 2px solid #555;
-     
-
+    width: 800px; 
+    height: 450px; 
+    //border: 2px solid #555;
 }
 .margen{
-    
+
     width: 950px; 
-     height: 350px; 
-     //background: black;
-     border: 2px solid black;
+    height: 350px; 
+    //background: black;
+    border: 2px solid black;
 }
 .rectanguloNegro{
-    
     width: 950px; 
-     height: 40px; 
-     background: black;
-     //border: 2px solid black;
+    height: 40px; 
+    background: black;
+    //border: 2px solid black;
 }
 .rectanguloGris{
-    
     width: 950px; 
-     height: 40px; 
-     background: grey;
-     //border: 2px solid black;
+    height: 40px; 
+    background: grey;
+    //border: 2px solid black;
 }
-
 .columna1{
     margin-top: 100px;
     margin-left: 300px
- }
+}
 .columna2{
     margin-top: -25px;
     margin-left: 550px
- }
- 
- .columna3{
+}
+.columna3{
     margin-top: -25px;
     margin-left: 700px
- }
- 
- .columna4{
+}
+
+.columna4{
     margin-top: -25px;
     margin-left: 820px
- }
- .columna5{
+}
+.columna5{
     margin-top: 155px;
     margin-left: 820px
- }
-
- .lh {
-  background-color: black;
-  width: 880px;
-  margin-left: 30px;
-  margin-top: 190px;
-  height: 2px;
+}
+.lh {
+    background-color: black;
+    width: 880px;
+    margin-left: 30px;
+    margin-top: 190px;
+    height: 2px;
 }
 .lineDiscontinua{
     margin-top: 50px;
     width: 880px;
     margin-left: 30px;
-    
-    
 }
 .imgButton{
     margin-top: -95px;
@@ -417,16 +428,20 @@ h4{
 .letraGris5{
     margin-top:-255px;
     margin-left:800px;  
->>>>>>> origin/master
 }
 @media(max-width: 768px){
+    .recomendacion{
+        font-size: 1.1em;        
+    }
+    .recomendacion .container{
+        padding-left: 60px;
+    }
     .tagline h2{
         font-size: 1.8em;
     }   
     .work-above h2{
-        font-size: 2.5em;
+        font-size: 2em;
     }
-
     .pack .container{
         padding-top: 10px;
     }
@@ -450,19 +465,30 @@ h4{
         padding-top: 45px;
     }
     .testimonials .container{
-        padding-top: 30px;  
+        padding-top: 30px; 
+    }
+    .testimonials .container{
+        padding-top: 30px; 
     }
     #stick{
         position: fixed;
         z-index: 140;
         width: 100%
     }
-
     .logo{
         padding-top: 52px;
     }
 }
+@media(max-width: 768px){
+
+}
 @media(max-width: 480px){
+    .recomendacion{
+        font-size: 0.7em;        
+    }
+    .recomendacion .container{
+        padding-left: 70px;
+    }
     .tagline h2{
         font-size: 1.3em;
     }   
@@ -475,7 +501,7 @@ h4{
     .build .container{
         padding-top: 20px;
     }
-    .testimonials .container{
+    .testimonials .container , .recomendacion .container{
         padding-top: 8px;   
     }
 
