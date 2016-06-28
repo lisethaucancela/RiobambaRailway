@@ -16,41 +16,84 @@
 
         <ui:composition template="template/template.xhtml">
             <ui:define name="content">
-                <div class="container ">  
-                    <div class="row">
-                        <div  style="background-position: center ; background:#fff " >
-                            <div class="Cuadrado">
-                                <div class="margen">
-                                    <div class="rectanguloNegro">
-                                       
-                                        <input class="columna1" type="date" name="fecha"/>
-                                        <input class="columna2 col-lg-1" type="number" name="cantidad" style="alignment-adjust: central"/>
-                                        <input class="columna3 col-lg-1" type="text" name="precioUnitario" />
-                                        <input class="columna4 col-lg-1" type="text" name="itemTotal"/>
-                                        <input class="columna5 col-lg-1" type="text" name="subTotal"/>
-                                    </div>
-                                    <div class="rectanguloGris">                                  
-                                        <h4 class ="col-lg-1 letraGris1" style="font-style: normal; color: black">ITEMS</h4>
-                                        <h4 class ="col-lg-1 letraGris2" style="font-style: normal; color: black">DATE</h4>
-                                        <h4 class ="col-lg-1 letraGris3" style="font-style: normal; color: black">QUANTILY</h4>
-                                        <h4 class ="col-lg-1 letraGris4" style="font-style: normal; color: black">ITEM PRICE</h4>
-                                        <h4 class ="col-lg-1 letraGris5" style="font-style: normal; color: black">ITEM TOTAL</h4>
-                                    </div>
-                                    
-                                    <div class="lh" ></div>
+                <h:form id="form">
+                    <div class="container ">  
+                        <div class="row">
+                            <div  style="background-position: center ; background:#fff " >
+                                <div class="Cuadrado row">
+                                    <div class="margen col-sm-12">
+                                        <div class="rectanguloNegro">                                      
 
-                                    <div class="lineDiscontinua" style="border-bottom-style: dashed; border-bottom-width: 1px; "></div>
-                                    <div class="flag">
-                                        <img src="images/continue shoping.png" class="imgButton"/>
+                                        </div>
+                                        <div > 
+                                            <div class="row">
+                                                <div class="col-md-2 col-sm-3">
+                                                    <h4 style="font-style: normal; color: black">ITEMS</h4>
+                                                </div>
+                                                <div class=" col-md-3 col-sm-3">
+                                                    <h4  style="font-style: normal; color: black">DATE</h4>
+                                                </div>
+                                                <div class=" col-md-3 col-sm-2">
+                                                    <h4 style="font-style: normal; color: black">QUANTILY</h4>
+                                                </div>
+                                                <div class=" col-md-2 col-sm-2">
+                                                    <h4  style="font-style: normal; color: black">ITEM PRICE</h4>
+                                                </div>
+                                                <div class=" col-md-2 col-sm-2">
+                                                    <h4  style="font-style: normal; color: black">ITEM TOTAL</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class=" col-md-3 col-sm-3 col-md-offset-2">
+
+
+                                                <p:growl id="msgs" showDetail="true" />
+                                                <h:panelGrid columns="2" cellpadding="5">
+                                                    <p:outputLabel for="button" value="" />
+                                                    <p:calendar id="button" value="#{pagoControlador.objcompra.fecha}" showOn="button" >
+                                                        
+                                                    </p:calendar>
+                                                </h:panelGrid>
+
+
+                                            </div>
+                                            <div class=" col-md-3 col-sm-3">
+                                                <p:spinner id="number"  value="#{pagoControlador.objcompra.cantidad}"/>
+                                            </div>
+                                            <div class=" col-md-2 col-sm-2">
+                                                <p:inputText styleClass="img-responsive" value="#{pagoControlador.objcompra.precioUnitario}" />
+                                            </div>
+
+                                            <div class=" col-md-2 col-sm-2">
+
+                                                <p:inputText styleClass="img-responsive" value="#{pagoControlador.objcompra.precioTotal}"/>
+                                            </div>
+                                        </div>
+                                        <div class="row padding-top-50">
+                                            <div class="col-lg-10 col-lg-offset-1" style="background-color: #000" ></div>
+                                        </div>
+                                        <div class="row padding-top-20"> 
+                                            <div class=" col-md-3 col-sm-2 col-xm-2">
+                                            </div>
+                                            <div class=" col-md-2 col-sm-2 col-md-offset-7">
+                                                <p:inputText styleClass="img-responsive" value="#{pagoControlador.objcompra.precioTotal}" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-10 col-lg-offset-1">
+                                                <p:commandButton value="Siguiente"  actionListener="#{pagoControlador.redPassenger()}" icon="ui-icon-check" />
+                                            </div>
+                                        </div>
+                                        
+
                                     </div>
-                                    
-                                    
+
                                 </div>
-
                             </div>
                         </div>
                     </div>
-                </div>
+                </h:form>
             </ui:define>
         </ui:composition>
     </h:body>

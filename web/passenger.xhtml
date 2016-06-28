@@ -16,59 +16,59 @@
 
         <ui:composition template="template/template.xhtml">
             <ui:define name="content">
-                <div class="container ">  
-                    <div class="row">
-                        <div  style="background-position: center ; background:#fff " >
-                            <div class="Cuadrado">
-                                <div class="margen">
-                                    <div class="rectanguloNegro">
-                                        <br/><br/><br/><br/><br/>
-                                        Name:
-                                        <input  type="text"/>
-                                        Last Name:
-                                        <input  type="text" />
-                                        <br/><br/>
-                                        IDENTITY
-                                        <br/><br/><br/>
+                <h:form id="form">
+                    <div class="container ">  
+                        <div class="row">
+                            <div  style="background-position: center ; background:#fff " >
+                                <div class="Cuadrado">
+                                    <div class="margen">
+                                        <div class="rectanguloNegro">
+                                            <br/><br/><br/><br/><br/>
+                                            Name:
 
-                                        TYPE
-                                        <select name="transporte">
-                                            <option>CI</option>
-                                            <option>PASSPORT</option>
-                                        </select>
+                                            <p:inputText value="#{pagoControlador.objpasajero.nombrePas}"/>
+                                            Last Name:
 
-                                        NUMBER
-                                        <input type="text"/>
-                                        PAIS DE EMISION
-                                        <select name="transporte">
-                                            <option>EEUU</option>
-                                            <option>CHILE</option>
-                                            <option>COLOMBIA</option>
-                                            <option>ECUADOR</option>
-                                            <option>ARGENTINA</option>
-                                            <option>PARAGUAY</option>
-                                            <option>PANAMA</option>
-                                            <option>COSTA RICA</option>
-                                        </select>
+                                            <p:inputText value="#{pagoControlador.objpasajero.apellidoPas}"/>
+                                            <br/><br/>
+                                            IDENTITY
+                                            <br/><br/><br/>
+
+                                            <p:outputLabel for="console" value="Type:" />
+                                            <p:selectOneMenu id="console" value="#{pagoControlador.objpasajero.idenTipoPas}" style="width:125px">
+                                                <f:selectItem itemLabel="Cédula" itemValue="cedula" />
+                                                <f:selectItem itemLabel="Pasaporte" itemValue="pasaporte" />
+                                            </p:selectOneMenu>
+                                            NUMBER
+                                            <p:inputText value="#{pagoControlador.objpasajero.indenNumPas}"/>
+                                            <p:outputLabel for="pais" value="Country:" />
+                                            <p:selectOneMenu id="pais" value="#{pagoControlador.objpasajero.paisPas}" style="width:125px">
+                                                <f:selectItem itemLabel="Chile" itemValue="chile" />
+                                                <f:selectItem itemLabel="España" itemValue="españa" />
+                                                <f:selectItem itemLabel="Ecuador" itemValue="ecuador" />
+                                                <f:selectItem itemLabel="Colombia" itemValue="colombia" />
+                                                <f:selectItem itemLabel="Australia" itemValue="australia" />
+                                                <f:selectItem itemLabel="EEUU" itemValue="EEUU" />
+                                            </p:selectOneMenu>
+                                        </div>
+                                        <div class="rectanguloGris">                                  
+                                            <h4 class ="col-lg-1 letraGris1" style="font-style: normal; color: black">PESSENGER</h4>
+                                        </div>
+
+                                        <div class="lh" ></div>
+                                        <div class="lineDiscontinua" style="border-bottom-style: dashed; border-bottom-width: 1px; "></div>
+                                        <div class="flag">
+                                            <p:commandButton value="Submit"  actionListener="#{pagoControlador.insertarPago()}" icon="ui-icon-check" />
+                                        </div>
+
+
                                     </div>
-                                    <div class="rectanguloGris">                                  
-                                        <h4 class ="col-lg-1 letraGris1" style="font-style: normal; color: black">PESSENGER</h4>
-                                    </div>
-
-                                    <div class="lh" ></div>
-
-                                    <div class="lineDiscontinua" style="border-bottom-style: dashed; border-bottom-width: 1px; "></div>
-                                    <div class="flag">
-                                        <img src="images/continue shoping.png" class="imgButton"/>
-                                    </div>
-
 
                                 </div>
-
                             </div>
                         </div>
                     </div>
-                </div>
+                </h:form>
             </ui:define>
         </ui:composition>
     </h:body>
