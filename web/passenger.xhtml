@@ -23,17 +23,17 @@
                                 <div class="Cuadrado">
                                     <div class="margen">
                                         <div class="rectanguloNegro">
-                                            <br/><br/><br/><br/><br/>
-                                            Name:
 
+                                        </div>
+                                        <div class="rectanguloGris">                                  
+                                            <h4 class ="col-lg-1 letraGris1" style="font-style: normal; color: black">PESSENGER</h4>
+                                        </div>
+                                        <div class="row">
+                                            <p:outputLabel value="Name:"/> 
                                             <p:inputText value="#{pagoControlador.objpasajero.nombrePas}"/>
-                                            Last Name:
-
+                                            <p:outputLabel value="Last Name"/> 
                                             <p:inputText value="#{pagoControlador.objpasajero.apellidoPas}"/>
-                                            <br/><br/>
                                             IDENTITY
-                                            <br/><br/><br/>
-
                                             <p:outputLabel for="console" value="Type:" />
                                             <p:selectOneMenu id="console" value="#{pagoControlador.objpasajero.idenTipoPas}" style="width:125px">
                                                 <f:selectItem itemLabel="Cédula" itemValue="cedula" />
@@ -50,18 +50,13 @@
                                                 <f:selectItem itemLabel="Australia" itemValue="australia" />
                                                 <f:selectItem itemLabel="EEUU" itemValue="EEUU" />
                                             </p:selectOneMenu>
-                                        </div>
-                                        <div class="rectanguloGris">                                  
-                                            <h4 class ="col-lg-1 letraGris1" style="font-style: normal; color: black">PESSENGER</h4>
-                                        </div>
+                                            <div class="lh" ></div>
+                                            <div class="lineDiscontinua" style="border-bottom-style: dashed; border-bottom-width: 1px; "></div>
+                                            <div class="flag">
+                                                <p:commandButton value="Submit"  actionListener="#{pagoControlador.insertarPago()}" icon="ui-icon-check" />
+                                            </div>
 
-                                        <div class="lh" ></div>
-                                        <div class="lineDiscontinua" style="border-bottom-style: dashed; border-bottom-width: 1px; "></div>
-                                        <div class="flag">
-                                            <p:commandButton value="Submit"  actionListener="#{pagoControlador.insertarPago()}" icon="ui-icon-check" />
                                         </div>
-
-
                                     </div>
 
                                 </div>
